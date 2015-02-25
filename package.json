@@ -26,12 +26,23 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "valid",
+    "integer",
+    "nonnegative",
+    "integerarray",
+    "array",
+    "is",
+    "isarray",
+    "isintegerarray"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/nonnegative-integer-array/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "validate.io-array": "^1.0.3",
+    "validate.io-nonnegative-integer": "^1.0.0"
+  },
   "devDependencies": {
     "chai": "1.x.x",
     "mocha": "1.x.x",

@@ -1,4 +1,4 @@
-nonnegative-integer-array
+Nonnegative Integer Array
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -17,18 +17,39 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-nonnegative-integer-array' );
+var isValid = require( 'validate.io-nonnegative-integer-array' );
 ```
 
-#### foo( value )
+#### isValid( value )
 
-What does this function do?
+Validates if a `value` is a nonnegative integer `array`.
+
+``` javascript
+var value = [ 3, 1, 0, 2 ];
+
+var bool = isValid( value );
+// returns true
+```
+
+__Note__: the method will return `false` for an empty `array`.
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-nonnegative-integer-array' );
+var isValid = require( 'validate.io-nonnegative-integer-array' );
+
+console.log( isValid( [3,1,0,2] ) );
+// returns true
+
+console.log( isValid( [] ) );
+// returns false
+
+console.log( isValid( [3.14] ) );
+// returns false
+
+console.log( isValid( [0,-1] ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
